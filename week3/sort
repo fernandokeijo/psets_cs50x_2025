@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: to be bubble sort, the sorting must take the biggest time when you are dealing with reversed numbers, and in that case it does take the biggest amount of time
+
+sort2 uses: Merge sort
+
+How do you know?: In basically any case it's the fastest and maintains a constant timing of sorting
+
+sort3 uses: Selection sort
+
+How do you know?: Take a good timing to sort everything but not as slow as bubble sort in this case
