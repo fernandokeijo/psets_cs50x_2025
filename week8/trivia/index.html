@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelectorAll('.quiz-btn').forEach(button => {
+                        button.addEventListener('click', function() {
+                            if (this.id === 'spfc') {
+                                this.style.backgroundColor = 'green';
+                            } else {
+                                this.style.backgroundColor = 'red';
+                            }
+                        });
+                    });
+                });
+
+               document.addEventListener('DOMContentLoaded', function () {
+                document.querySelector('.quiz-btn2').addEventListener('click', function () {
+                    let input = document.querySelector('.answer').value.trim().toLowerCase();
+                    let feedback = document.getElementById('feedback');
+
+                        if (input === 'brazil') {
+                            feedback.textContent = 'CORRECT';
+                            feedback.style.color = 'green';
+                        } else {
+                            feedback.textContent = 'Wrong';
+                            feedback.style.color = 'red';
+                        }
+                    });
+                });
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <h3> What's the biggest soccer team in Brazil? </h3>
+                 <button class="quiz-btn" id="flamengo"> Flamengo </button>
+                 <button class="quiz-btn" id="santos"> Santos </button>
+                 <button class="quiz-btn" id="palmeiras"> Palmeiras?? </button>
+                 <button class="quiz-btn" id="spfc"> SAO PAULO </button>
+                 <button class="quiz-btn" id="corinthians"> Corinthians?? </button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3> What's the best country in the world? </h3>
+                 <input class="answer">
+                 <button class="quiz-btn2"> confirm </button>
+                 <p id="feedback"></p>
+
+            </div>
+        </div>
+    </body>
+</html>
