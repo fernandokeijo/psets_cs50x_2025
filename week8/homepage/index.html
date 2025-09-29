@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .main-wrapper {
+            display: flex;
+            height: 100vh;
+        }
+
+        .carousel-side {
+            width: 50%;
+            height: 100%;
+        }
+
+        .carousel-side .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-side {
+            width: 50%;
+            height: 100%;
+            overflow-y: auto;
+            background-color: #1a1a1a; /* ou outra cor que combine */
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header id="navbar"></header>
+
+<div class="main-wrapper">
+    <!-- Lado do carrossel -->
+    <div class="carousel-side" id="gallery"></div>
+
+    <!-- Lado do conteúdo -->
+    <div class="content-side">
+        <h1>Hello CS50! Welcome to my webpage!</h1>
+        <p>I'm Fernando, I reside in Brazil,  I'm 19 years old and currently enrolled on an associate degree in one of the best public colleges in my country, as you might expect, it's related to IT haha.
+             I love being around people, together we can grow as a community and be greater as professionals and human beings. I have a strong passion for my country
+             and I would like to represent it abroad, I believe that Brazil is a very warming country with a lot of promissing people in every professional area, and people from outside should look more
+             in Brazil, I hope that one day all of you could feel how warming are the brazilian people!
+        <p>
+            Currently I work as an English teacher, I love to teach, meet new people, share and listen to new ideas, and that's what makes my job special for me, is something I have fun with, crisscrossing paths with
+            different kind of people and making a difference in each others life, because you know, even teaching we still learn.
+        </p>
+
+        <p>
+            While as I perform my role as a teacher, I am looking for an internship in IT, I spent some time since I started my graduation studying a little of each part of IT to decide which part would I dive into,
+             and to be honest, I enjoyed all of them haha.
+        </p>
+
+        <p>here you will find some information related to me such as the things I enjoy doing on my freetime, my family, my professional path through getting an internship that I've been always waiting and working for!
+            and I wish that one day I will be able to meet Havard's camp IRL, I will be always grateful for all the experiences this online course made me pass through.
+        </p>
+        <p>Hope you like it!</p>
+    </div>
+</div>
+
+<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        });
+
+    fetch('gallery.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('gallery').innerHTML = data;
+        });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
