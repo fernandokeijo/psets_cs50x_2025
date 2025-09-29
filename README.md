@@ -21,8 +21,8 @@ You can access all problem descriptions and official materials directly on the C
 - `week6/` – Python  
 - `week7/` – SQL  
 - `week8/` – HTML, CSS, JavaScript  
-- `week9/` – Flask  
-- `final_project/` – My final project  
+- `week9/` – Flask - loading... 
+- `final_project/` – My final project - loading...
 
 ## About
 
