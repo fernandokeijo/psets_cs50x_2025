@@ -1,0 +1,61 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+
+tbody tr:nth-of-type(odd) {
+    background-color: rgb(179, 208, 255, 0.3)
+}
+
+
+     table {
+        margin: 0 auto;
+        width: 80%;
+        border-collapse: collapse;
+        text-align: left;
+    }
+
+    th {
+        background-color: #e8f0fe;
+        padding: 12px;
+        font-size: 16px;
+        border-bottom: 2px solid #ccc;
+    }
+
+    td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
