@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main Page
+{% endblock %}
+
+{% block main %}
+
+     <body>
+
+        <h2>Portfolio</h2>
+
+            <table>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>TOTAL</th>
+                </tr>
+                {% for stock in stocks %}
+                <tr>
+                    <td> {{stock.symbol}} </td>
+                    <td> {{stock.shares}} </td>
+                    <td> ${{stock.price}} </td>
+                    <td> ${{stock.shares * stock.price}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        <div class="summary-line">
+            <span>Cash</span>
+            <span>${{yrCache}}</span>
+        </div>
+
+        <div class="summary-line right">
+            <span>TOTAL</span>
+            <span><strong>${{total}}</strong></span>
+        </div>
+
+        <div class="summary-line">
+            <form action="/" method="post">
+                <input class="form-control mx-auto w-auto" name="cash" placeholder="add cash" type="text">
+                <button class="btn btn-primary" type="submit"> confirm </button>
+            </form>
+        </div>
+
+
+    </body>
+
+{% endblock %}
+
