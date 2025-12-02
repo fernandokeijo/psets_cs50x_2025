@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+ {% block title %}
+    quoted
+ {% endblock %}
+
+ {% block main %}
+
+        successfully quoted
+    <div class="mb-3">
+            <tr>
+                    <td>{{ values.name }}</td>
+                    <td>{{ values.price }}</td>
+                    <td>{{ values.symbol }}</td>
+            </tr>
+
+    </div>
+    <a href="/" class="btn btn-primary">Return</a>
+
+{% endblock %}
