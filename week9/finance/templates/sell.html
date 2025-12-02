@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+sells
+{% endblock %}
+
+{% block main %}
+
+<form action="/sell" method="post">
+        <div class="mb-3">
+            <p>
+                Your Stock's symbol
+            </p>
+            <input required autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="symbol" type="text" margin-bottom="20" style="margin-bottom: 20px;">
+            <p>
+                put the amount of shares you want to sell
+            </p>
+            <input required autocomplete="off" autofocus class="form-control mx-auto w-auto" name="shares" placeholder="shares" type="text">
+
+        </div>
+
+        <button class="btn btn-primary" type="submit"> Sell </button>
+
+
+    </form>
+
+
+
+
+{% endblock %}
