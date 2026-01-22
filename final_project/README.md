@@ -1,5 +1,5 @@
 # RATE THE BATHROOM
-#### Video Demo:  <(https://youtu.be/ABvE8E0kkLs)>
+#### Video Demo:  <( https://youtu.be/ABvE8E0kkLs )>
 #### Description:
 
 Rate the Bathroom is a full-stack web application where users can post reviews of bathrooms, upload images, rate other users’ reviews with stars, like posts, and interact through comments.
