@@ -1,0 +1,577 @@
+/* ===============================
+   Dark Neon Blue Theme – RateMyBathroom
+   Reddit-style Feed
+   =============================== */
+
+body {
+    background-color: #121212;
+    color: #e4e4e4;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0c0c0c !important;
+    border-bottom: 1px solid #1f2330;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #00aaff !important;
+}
+
+/* Flash messages */
+.alert-info {
+    background-color: #0f172a;
+    color: #cfe9ff;
+    border: 1px solid #1e3a8a;
+}
+
+/* Containers */
+.container {
+    max-width: 900px;
+}
+
+/* ===============================
+   Cards (Bootstrap override)
+   =============================== */
+.card {
+    background-color: #14161c;
+    border: 1px solid #1f2330;
+    border-radius: 10px;
+}
+
+/* Reddit-style post card */
+.post-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    border-color: #00aaff;
+    box-shadow: 0 8px 22px rgba(0, 170, 255, 0.25);
+}
+
+/* ===============================
+   Reddit-style thumbnail
+   =============================== */
+.thumb-wrapper {
+    width: 90px;
+    min-width: 90px;
+    height: 70px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #0f1118;
+    border: 1px solid #1f2330;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.post-card:hover .post-thumb {
+    transform: scale(1.06);
+}
+
+/* ===============================
+   Text styles
+   =============================== */
+.card-title {
+    color: #eaf2ff;
+    font-weight: 600;
+}
+
+.card-text {
+    color: #9fb4d8 !important;
+}
+
+.username {
+    color: #7dd3fc;
+    font-weight: 500;
+}
+
+/* ===============================
+   Inputs
+   =============================== */
+.form-control {
+    background-color: #14161c;
+    border: 1px solid #1f2330;
+    color: #e8f6ff;
+}
+
+.form-control:focus {
+    background-color: #161922;
+    border-color: #00aaff;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.5);
+    color: #ffffff;
+}
+
+.form-control::placeholder,
+textarea::placeholder {
+    color: #9fb4d8;
+    opacity: 1;
+}
+
+label {
+    color: #a5c9ff;
+    font-weight: 500;
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+.btn-primary {
+    background-color: #0ea5e9;
+    border-color: #0ea5e9;
+}
+
+.btn-primary:hover {
+    background-color: #38bdf8;
+    border-color: #38bdf8;
+}
+
+/* ===============================
+   Links
+   =============================== */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+}
+
+.card-link-wrapper {
+    display: block;
+}
+
+/* ===============================
+   Footer
+   =============================== */
+footer {
+    color: #6b7280;
+}
+
+/* TIMELINE */
+.timeline {
+    max-width: 720px;
+    margin: auto;
+}
+
+/* CARD */
+.timeline-card {
+    display: block;
+    padding: 18px;
+    margin-bottom: 16px;
+    background-color: #14161c;
+    border: 1px solid #1f2330;
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition:
+        background-color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.timeline-card:hover {
+    background-color: #181b26;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 170, 255, 0.2);
+}
+
+/* HEADER */
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.timeline-pfp {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3f7cff;
+}
+
+.timeline-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.username {
+    font-weight: 600;
+    color: #dce6ff;
+}
+
+.time {
+    font-size: 0.85rem;
+    color: #8a8a8a;
+}
+
+/* TITLE */
+.timeline-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 6px 0 12px;
+    color: #eef1ff;
+}
+
+/* IMAGE */
+.timeline-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #2a2f45;
+}
+
+/* Like button */
+.btn-like {
+    background: transparent;
+    border: 1px solid #2a2f45;
+    color: #9aa4ff;
+    padding: 6px 12px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Hover */
+.btn-like:hover {
+    background: rgba(0, 170, 255, 0.1);
+    border-color: #00aaff;
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Active click */
+.btn-like:active {
+    transform: scale(0.95);
+}
+
+/* Icon */
+.like-icon {
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+/* Liked state */
+.btn-like.liked {
+    background: rgba(0, 170, 255, 0.15);
+    border-color: #00aaff;
+    color: #e8f6ff;
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+}
+
+.btn-like.liked .like-icon {
+    transform: scale(1.2);
+}
+.btn-like.pop {
+    animation: popLike 0.15s ease;
+}
+
+@keyframes popLike {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.post-actions span {
+    color: #8faaff;
+    font-size: 0.85rem;
+}
+
+/* Rating box */
+.rating-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Stars */
+.stars {
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 1.8rem;
+    color: #444;
+    cursor: pointer;
+    transition: transform .2s, color .2s;
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #00aaff;
+     transform: scale(1.2);
+}
+
+.star.active {
+    color: #00aaff;
+}
+
+.star:active {
+    transform: scale(1.2);
+}
+
+.rating-text {
+    font-size: 0.85rem;
+    color: #9aa4ff;
+}
+
+.star.selected {
+    color: #00aaff;
+}
+
+.star.locked {
+    color: #6bbcff;
+    cursor: default;
+}
+
+.star-rating[data-locked="true"] .star:hover {
+    transform: none;
+}
+
+.comment-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-box textarea {
+    flex: 1;
+    background: #0f1115;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    color: white;
+    padding: 8px;
+    resize: none;
+}
+
+.comment-box button {
+    background: #1d9bf0;
+    border: none;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.comment {
+    display: flex;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+}
+
+.comment-pfp {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.delete-comment {
+    background: none;
+    border: none;
+    color: #777;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 4px;
+}
+
+.delete-comment:hover {
+    color: #ff4d4d;
+}
+
+.comment {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.pfp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    /* opcional, mas deixa bem alinhado */
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pfp:hover {
+    opacity: 0.9;
+}
+
+
+/* ===============================
+   Star Rating (Rate Page)
+   =============================== */
+
+.star-rating {
+    display: inline-flex;
+    gap: 6px;
+    direction: ltr;
+
+}
+
+/* esconde os radios */
+.star-rating input {
+    display: none;
+}
+
+/* estrela */
+.star-rating label {
+    font-size: 2rem;
+    color: #444;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* hover */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #00aaff;
+    transform: scale(1.15);
+}
+
+/* selecionado */
+.star-rating input:checked ~ label {
+    color: #00aaff;
+}
+
+.card h2 {
+    color: #eaf2ff;
+}
+
+.profile-card {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.profile-card h4,
+.profile-card span,
+.profile-card strong {
+    color: #ffffff;
+}
+
+.profile-card .profile-stats span {
+    color: #cccccc;
+}
+
+
+.profile-header h4 {
+    font-weight: 600;
+}
+
+.profile-pfp {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 16px;
+    border: 2px solid #2f80ed;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    color: #ff4d4d;
+}
+
+.rating-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.rating-label {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.stars {
+    display: flex;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 32px;
+    color: #333;
+    transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.star:hover {
+    transform: scale(1.15);
+}
+
+.star.active {
+    color: #f5c518; /* dourado */
+}
+
+.star.hovered {
+    color: #f5c518;
+}
+
+.rating-value {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.post-image-large {
+    width: 100%;
+    max-width: 600px;
+    max-height: 500px;
+    object-fit: contain;
+    background-color: #111;
+    padding: 6px;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
