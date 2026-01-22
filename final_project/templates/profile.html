@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block main %}
+
+<link href="/static/style.css" rel="stylesheet">
+
+<div class="card p-4 profile-card">
+
+    <!-- Header -->
+    <div class="profile-header">
+        <img src="{{ url_for(
+            'static',
+            filename='uploads/' + (user.profile_picture or 'default_pfp.png')
+            ) }}"
+             class="profile-pfp">
+
+        <div>
+            <h4>@{{ user.username }}</h4>
+            <div class="profile-stats">
+                <span><strong>{{ stats.posts }}</strong> posts</span>
+                <span><strong>{{ stats.likes }}</strong> likes</span>
+            </div>
+        </div>
+
+        {% if is_owner %}
+        <a href="/profile/edit" class="btn btn-outline-info ms-auto">
+            Edit profile
+        </a>
+        {% endif %}
+
+    </div>
+</div>
+
+<!-- User posts -->
+<div class="timeline mt-4">
+{% for post in posts %}
+<a href="/review/{{ post.id }}" class="timeline-card">
+
+    <div class="timeline-header">
+        <img src="{{ url_for(
+            'static',
+            filename='uploads/' + (user.profile_picture or 'default_pfp.png')
+            ) }}"
+             class="timeline-pfp">
+
+        <div>
+            <span class="username">@{{ user.username }}</span><br>
+            <small class="time">{{ post.created_at }}</small>
+        </div>
+    </div>
+
+    <div class="timeline-title">{{ post.title }}</div>
+
+    {% if post.main_image %}
+        <img src="{{ url_for('static', filename='uploads/' + post.main_image) }}"
+             class="timeline-image">
+    {% endif %}
+
+    <div class="post-actions mt-2">
+        ❤️ {{ post.likes_count }}
+        💬 {{ post.comments_count }}
+    </div>
+
+</a>
+{% endfor %}
+</div>
+
+{% endblock %}
